@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+        <link href="styles/tracker.css" rel="stylesheet" type="text/css" />
+   		<script type="text/javascript" src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/jquery-ui.js"> </script>
+		<script type="text/javascript" src="scripts/tracker.js"> </script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				jQuery("#date").datepicker({
+					showOn: 'button',
+					buttonImage: 'images/calendar.png',
+					buttonImageOnly: true
+				});
+				jQuery("#tasks").click(function () { 
+        			 jQuery("#taskscontent").slideToggle("slow");
+   				});
+			});
+			Tracker.init();
+		</script>
+    </head>
+    <body>
+    	<div class="time-activity">
+    		<div class="header">
+    			<span class="title">Time Tracker</span>
+    		</div>
+    		<div class="activity"> 
+    			<span> 
+    				<label> Activity :</label>
+    			</span>
+    			<span>
+    				<input id="activity" name="activity" type="text" onchange="Tracker.removeValidationMessage();">
+    				<a id="start" class="small button" name="start" onclick="Tracker.startTracking()">Start</a>
+    			</span>
+				<span class="calendar">
+					<input id="date" type="hidden" />
+				</span>
+    		</div>
+    		<div class="tasks">
+    			<div class="tasks-header">
+    				<span class="time" >time</span>
+    				<span class="activity" >activity</span>
+    				<span class="from" >from</span>
+    				<span class="to" >to</span>
+    				<span class="actions" >actions</span>
+    			</div>
+    			<div id="tasks" class="tasks-content" >
+    				<span class="tasks-no-content"> no tasks</span>
+    			</div>
+    		</div>
+    	</div>
+    </body>
+</html>

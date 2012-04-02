@@ -1,0 +1,16 @@
+{
+  "name": "Time Tracker",
+  "options_page": "options.html",
+  "permissions": [
+    "notifications"
+  ],
+  "version": "1.0.0",
+  "description": "Tracks how much time you spend on different projects and tasks",
+  "icons": { "128": "images/icon.png" },
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "Time Tracker",
+    "popup": "activityTracker.html"
+  },
+  "background_page": "background.html"
+}
