@@ -5,6 +5,9 @@
    		<script type="text/javascript" src="scripts/jquery.js"></script>
         <script type="text/javascript" src="scripts/jquery-ui.js"> </script>
 		<script type="text/javascript" src="scripts/tracker.js"> </script>
+		<script type="text/javascript" src="scripts/moment.js" > </script>
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"> </script>
+		
 
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
@@ -30,7 +33,7 @@
     				<label> Activity :</label>
     			</span>
     			<span>
-    				<input id="activity" name="activity" type="text" onchange="Tracker.removeValidationMessage();">
+    				<input id="activity" name="activity" type="text" onchange="Tracker.clear(this);">
     				<a id="start" class="small button" name="start" onclick="Tracker.startTracking()">Start</a>
     			</span>
 				<span class="calendar">
@@ -50,5 +53,14 @@
     			</div>
     		</div>
     	</div>
+    	<div title="Error" id="error" style="display:none;"></div>
     </body>
 </html>
+
+<script id="taskRecord" type="text/x-jquery-tmpl">
+    <span class="time" >time</span>
+    <span class="activity" >activity</span>
+    <span class="from" >from</span>
+    <span class="to" >to</span>
+    <span class="actions" >actions</span>
+</script>

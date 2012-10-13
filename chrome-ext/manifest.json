@@ -1,4 +1,5 @@
 {
+  "manifest_version": 2,
   "name": "Time Tracker",
   "options_page": "options.html",
   "permissions": [
@@ -10,7 +11,10 @@
   "browser_action": {
     "default_icon": "images/icon.png",
     "default_title": "Time Tracker",
-    "popup": "activityTracker.html"
+    "default_popup": "activityTracker.html"
   },
-  "background_page": "background.html"
+  "background": {
+    "persistent": false,
+    "scripts": ["scripts/bg.js"]
+  }
 }

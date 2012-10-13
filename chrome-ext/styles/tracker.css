@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 .time-activity {  
 	box-shadow: 2px 2px 2px 2px #024059;
-	max-width:445px;
+	max-width:457px;
 	overflow-x:hidden;
 	font-family: tahoma;
 	font-size:12px;
@@ -98,7 +97,6 @@ body {
 .tasks-header{
 	border-radius: 3px;
 	padding:5px 5px 5px 5px;
-	text-align:center;
 	color:#C9D94E;
 	background: -webkit-gradient(linear, left top, left bottom, from(#024059), to(#038C8C));
 	border-radius: 7px 7px 0 0 ;
@@ -106,18 +104,29 @@ body {
 }
 
 .tasks-header .time {
+	width: 55px;
+	display: inline-block;
 }
 
 .tasks-header .activity {
+	width: 55px;
+	display: inline-block;
+	padding:0;
 }
 
 .tasks-header .from {
+	width: 55px;
+	display: inline-block;
 }
 
 .tasks-header .to {
+	width: 55px;
+	display: inline-block;
 }
 
 .tasks-header .actions {
+	width: 55px;
+	display: inline-block;
 }
 
 .tasks-content {
@@ -651,4 +660,3 @@ body {
 	.activity{
 			padding: 5px 10px 6px;
 	}
->>>>>>> 9755327da2a3c784c00d8023fb7b5b1db4a9ec4f
